@@ -8,10 +8,10 @@ The feature retrieval files (<tt>retrieval.py</tt>, <tt>word_embeddings.py</tt>)
 
 If you find this code useful please cite the following:
   
-    @article{arora2018sensing,
+    @inproceedings{arora2018sensing,
       title={A Compressed Sensing View of Unsupervised Text Embeddings, Bag-of-n-Grams, and LSTMs},
       author={Arora, Sanjeev and Khodak, Mikhail and Saunshi, Nikunj and Vodrahalli, Kiran},
-      journal={To Appear in the Proceedings of the International Conference on Learning Representations (ICLR)},
+      booktitle={To Appear in the Proceedings of the International Conference on Learning Representations (ICLR)},
       year={2018}
     }
     
