@@ -245,14 +245,14 @@ def OrthogonalMP(A, b, tol=1E-4, nnz=None, positive=False):
   d, n = A.shape
   if nnz is None:
     nnz = n
-  normb = norm(b)
-  stop = lambda niter, resid: niter >= nnz or norm(resid)/normb < tol
   x = np.zeros(n)
-  niter = 0
   resid = np.copy(b)
+  normb = norm(b)
   indices = []
 
-  while not stop(niter, resid):
+  for i in range(nnz):
+    if norm(resid)/normb < tol:
+      break
     projections = AT.dot(resid)
     if positive:
       index = np.argmax(projections)
@@ -272,9 +272,8 @@ def OrthogonalMP(A, b, tol=1E-4, nnz=None, positive=False):
           argmin = np.argmin(x_i)
           indices = indices[:argmin] + indices[argmin+1:]
           A_i = np.vstack([A_i[:argmin], A_i[argmin+1:]])
-          x_i = inv(A_i.dot(A_i.T)).dot(A_i.dot(b))
+          x_i = solve(A_i.dot(A_i.T), A_i.dot(b), assume_a='pos')
     resid = b - A_i.T.dot(x_i)
-    niter += 1
 
   for i, index in enumerate(indices):
     try:
@@ -305,14 +304,14 @@ def MatchingPursuit(A, b, tol=1E-4, nnz=None, positive=False, orthogonal=False):
   d, n = A.shape
   if nnz is None:
     nnz = n
-  normb = norm(b)
-  stop = lambda niter, resid: niter >= nnz or norm(resid)/normb < tol
   x = np.zeros(n)
-  selected = np.zeros(n, dtype=np.bool)
-  niter = 0
   resid = np.copy(b)
+  normb = norm(b)
+  selected = np.zeros(n, dtype=np.bool)
 
-  while not stop(niter, resid):
+  for i in range(nnz):
+    if norm(resid)/normb < tol:
+      break
     projections = AT.dot(resid)
     projections[selected] = 0.0
     if positive:
@@ -326,16 +325,16 @@ def MatchingPursuit(A, b, tol=1E-4, nnz=None, positive=False, orthogonal=False):
     resid -= coef*atom
     x[index] = coef
     selected[index] = True
-    niter += 1
   return x
 
 MP = MatchingPursuit
 
 
-def outer_product_cache(X):
+def outer_product_cache(X, limit=float('inf')):
   '''cache method for computing and storing outer products
   Args:
     X: matrix of row vectors
+    limit: stops storing outer products after cache contains this many elements
   Returns:
     function that computes outer product of row with itself given its index
   '''
@@ -345,7 +344,8 @@ def outer_product_cache(X):
     output = cache.get(i)
     if output is None:
       output = np.outer(X[i], X[i])
-      cache[i] = output
+      if len(cache) < limit:
+        cache[i] = output
     return output
   return outer_product
 
@@ -362,25 +362,30 @@ def binary_line_search(x, dx, f, nsplit=16):
   '''
 
   obj = f(x)
-  alpha = 0.5
+  alpha = 0.0
   failed = True
-  for i in range(2, nsplit+1):
-    step = x+alpha*dx
-    objstep = f(step)
-    if objstep<obj:
-      alpha += 2**-i
-      obj = objstep
-      failed = False
-    else:
-      alpha -= 2**-i
+  increment = True
+  while increment:
+    alpha += 0.5
+    for i in range(2, nsplit+1):
+      step = x+alpha*dx
+      objstep = f(step)
+      if objstep<obj:
+        alpha += 2.0**-i
+        obj = objstep
+        failed = False
+      else:
+        alpha -= 2.0**-i
+        increment = False
   return alpha, failed
+
 
 # NOTE: Hybrid (1st & 2nd Order) Method Based on Boyd & Vandenberghe, ``Chapter 10: Equality-Contrained Minimization," Convex Optimization, 2004.
 def SupportSupportingHyperplane(x, A, niter=None, eps=1.0, nsplit=16):
   '''checks SSH property by solving min_h sum(max{Ch+eps,0}^2) s.t. Sh=0, where C=(A_{supp(x)^C}^T 1) and S=(A_supp(x)^T 1)
   Args:
     x: nonnegative vector of length n
-    A: matrix of size (d, n) with unit norm columns
+    A: matrix of size (d, n)
     niter: give up after this many iterations; if None sets niter=n
     eps: separation of non-support vertices from support supporting hyperplane
     nsplit: how many binary splits to perform when doing line search
@@ -391,26 +396,31 @@ def SupportSupportingHyperplane(x, A, niter=None, eps=1.0, nsplit=16):
   assert not (x<0).sum(), "signal (x) must be nonnegative"
   assert eps>0.0, "separation (eps) must be positive"
   d, n = A.shape
+  A = np.append(A, np.zeros((d, 1)), axis=1)
+  n += 1
   if niter is None:
     niter = d
   if type(x) != np.ndarray:
     x = x.toarray()[0]
+  x = np.append(x, 0)
   nz = np.where(x>0)[0]
   z = np.where(x==0)[0]
   nnz = nz.shape[0]
   C = np.hstack([A[:,z].T, np.ones((n-nnz, 1))])
   AST = A[:,nz].T
-  S = np.hstack([AST, np.ones((nnz, 1))])
-
-  h = np.append(lstsq(AST, np.ones(nnz))[0], -1.0)
+  h, ssr, _, _ = lstsq(AST, np.ones(nnz))
+  if ssr:
+    return False
+  h = np.append(h, -1.0)
   Ch = C.dot(h)
   if all(Ch < 0.0):
     return h
+  S = np.hstack([AST, np.ones((nnz, 1))])
   ST = S.T
   correction = (ST.dot(inv(S.dot(ST)).dot(S))-np.eye(d+1))
   objective = lambda Chpeps: sum(Chpeps[Chpeps>0.0]**3)
   b = np.zeros(d+1+nnz)
-  outer_product = outer_product_cache(C)
+  outer_product = outer_product_cache(C, 1E10/d**2)
 
   for i in range(niter):
 

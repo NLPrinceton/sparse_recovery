@@ -27,7 +27,7 @@ if __name__ == '__main__':
     kwargs['alpha'] = 1E-3
 
   docs = tokenize(doc.lower() for doc in TASKMAP[dataset]('train')[0])
-  vocab = {word for doc in docs for word in doc}
+  vocab = set(vocab2vecs({word for doc in docs for word in doc}, corpus='Amazon', dimension=50).keys())
   for embedding in sys.argv[4:]:
     try:
       corpus, objective, dimension = embedding.split('_')
