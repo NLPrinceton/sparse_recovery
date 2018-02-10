@@ -137,7 +137,7 @@ def BasisPursuit(A, b, x0=None, ATinvAAT=None, positive=False, tol=1E-4, niter=1
 
     oofu1 = 1.0/fu1
     oofu2 = 1.0/fu2
-    w1 = -ootau*(oofu2-oofu2) - ATv
+    w1 = -ootau*(oofu2-oofu1) - ATv
     w2 = -1.0-ootau*(oofu1+oofu2)
     w3 = -rpri
 
