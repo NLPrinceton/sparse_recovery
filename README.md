@@ -3,7 +3,7 @@
 This module provides solvers and utility functions for several problems in sparse recovery/compressed sensing. The file <tt>solvers.py</tt>, which depends only on NumPy/SciPy and can be used with Python 2 or 3, provides methods to compute the following:
   * Basis Pursuit (BP), including Nonnegative BP (BP+); the BP solver is ported from the l1-MAGIC MATLAB package [1]; the BP+ solver is based on the same primal-dual interior point method [2].
   * Orthogonal Matching Pursuit (OMP), including Nonnegative OMP (OMP+).
-  * Support Supporting Hyperplane (SSH), a property that guarantees recovery of a signal x from linear measurements Ax via BP+ [3].
+  * Supporting Hyperplane Property (SHP), a property that guarantees recovery of a signal x from linear measurements Ax via BP+ [3].
   
 The feature retrieval files (<tt>retrieval.py</tt>, <tt>word_embeddings.py</tt>) additionally require scikit-learn and text_embedding. These files are used by scripts in the directory <tt>scripts-AKSV2018</tt> to recreate the results in [3].
 

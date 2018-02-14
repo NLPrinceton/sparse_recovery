@@ -17,8 +17,8 @@ if __name__ == '__main__':
   m = int(sys.argv[2])
   method = sys.argv[3]
   kwargs = {'m': m, 'verbose': True}
-  if method.lower() == 'ssh':
-    kwargs['ssh'] = True
+  if method.lower() == 'shp':
+    kwargs['shp'] = True
   elif method[-1] == '+':
     kwargs['positive'] = True
     kwargs['method'] = method[:-1]

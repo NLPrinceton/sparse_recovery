@@ -3,7 +3,7 @@
 
 for EMBEDDING in Amazon_SN_ Amazon_GloVe_ Rademacher_; do
   echo $EMBEDDING
-  for METHOD in SSH BP OMP+ OMP; do
+  for METHOD in SHP BP OMP+ OMP; do
     echo $METHOD
     python -W ignore sparse_recovery/word_embeddings.py SST 500 $METHOD $EMBEDDING'50' $EMBEDDING'100' $EMBEDDING'200' $EMBEDDING'400'
   done

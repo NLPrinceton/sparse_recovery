@@ -1,13 +1,13 @@
 Amazon_SN_
-SSH
+SHP
 Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon SN Vectors
-88/500 Documents Satisfy SSH
+88/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon SN Vectors
-369/500 Documents Satisfy SSH
+369/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon SN Vectors
-498/500 Documents Satisfy SSH
+498/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon SN Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 BP
 Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon SN Vectors
 84/500 Documents Recovered Perfectly
@@ -49,15 +49,15 @@ Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon SN Vector
 Precision: 1.0, Recall: 1.0, F1-Score: 1.0
 
 Amazon_GloVe_
-SSH
+SHP
 Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon GloVe Vectors
-108/500 Documents Satisfy SSH
+108/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon GloVe Vectors
-370/500 Documents Satisfy SSH
+370/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon GloVe Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon GloVe Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 BP
 Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon GloVe Vectors
 29/500 Documents Recovered Perfectly
@@ -99,15 +99,15 @@ Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon GloVe Vec
 Precision: 0.818884027151, Recall: 0.842242112932, F1-Score: 0.827971642723
 
 Rademacher_
-SSH
+SHP
 Testing Recovery of SST BoW from Compression by 50-Dimensional Rademacher Vectors
-33/500 Documents Satisfy SSH
+33/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 100-Dimensional Rademacher Vectors
-144/500 Documents Satisfy SSH
+144/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 200-Dimensional Rademacher Vectors
-438/500 Documents Satisfy SSH
+438/500 Documents Satisfy SHP
 Testing Recovery of SST BoW from Compression by 400-Dimensional Rademacher Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 BP
 Testing Recovery of SST BoW from Compression by 50-Dimensional Rademacher Vectors
 26/500 Documents Recovered Perfectly

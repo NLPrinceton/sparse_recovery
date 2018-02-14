@@ -119,19 +119,19 @@ def f1score(predicted, truth):
   return f1
 
 
-def information_preservation(documents, f2v, m=40, ssh=False, sorted_features=sorted, verbose=False, random_state=0, **kwargs):
+def information_preservation(documents, f2v, m=40, shp=False, sorted_features=sorted, verbose=False, random_state=0, **kwargs):
   '''evaluates recovery of sparse document featurizations from linear measurements
   Args:
     documents: list of featurized documents (lists of hashable features)
     f2v: dict mapping features to vectors
     m: sample size
-    ssh: check Support Supporting Hyperplane property instead of recovery
+    shp: check Supporting Hyperplane Property instead of recovery
     sorted_features: function that sorts the features
     verbose: display recovery statistics before returning
     random_state: seed for subsampling
-    kwargs: passed to recover_features or SSH
+    kwargs: passed to recover_features or SHP
   Returns:
-    if ssh returns featurizations (sparse CSR matrix with m rows) and Boolean vector of length m indicating SSH; otherwise returns featurizations and recovered featurizations
+    if shp returns featurizations (sparse CSR matrix with m rows) and Boolean vector of length m indicating SHP; otherwise returns featurizations and recovered featurizations
   '''
 
   vocabulary = {feat for doc in documents for feat in doc}
@@ -143,10 +143,10 @@ def information_preservation(documents, f2v, m=40, ssh=False, sorted_features=so
   original = docs2bofs(np.random.choice(docs, size=m, replace=False), vocabulary=featlist)
   A = np.vstack(f2v[feat] for feat in featlist)
 
-  if ssh:
-    S = np.array([type(SSH(x, A.T, **kwargs)) == np.ndarray for i, x in enumerate(original) if not verbose or write('\rChecking SSH of Document '+str(i+1)+'/'+str(m))])
+  if shp:
+    S = np.array([type(SHP(x, A.T, **kwargs)) == np.ndarray for i, x in enumerate(original) if not verbose or write('\rChecking SHP of Document '+str(i+1)+'/'+str(m))])
     if verbose:
-      write('\r'+str(np.sum(S))+'/'+str(m)+' Documents Satisfy SSH'+20*' '+'\n')
+      write('\r'+str(np.sum(S))+'/'+str(m)+' Documents Satisfy SHP'+20*' '+'\n')
     return original, S
 
   recovered = recover_features(A.T, original.dot(A), verbose=verbose, **kwargs)

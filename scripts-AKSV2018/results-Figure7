@@ -1,13 +1,13 @@
 Amazon_SN_
-SSH
+SHP
 Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon SN Vectors
-110/500 Documents Satisfy SSH
+110/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon SN Vectors
-423/500 Documents Satisfy SSH
+423/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon SN Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon SN Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 BP
 Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon SN Vectors
 106/500 Documents Recovered Perfectly
@@ -49,15 +49,15 @@ Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon SN Vect
 Precision: 1.0, Recall: 1.0, F1-Score: 1.0
 
 Amazon_GloVe_
-SSH
+SHP
 Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon GloVe Vectors
-119/500 Documents Satisfy SSH
+119/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon GloVe Vectors
-440/500 Documents Satisfy SSH
+440/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon GloVe Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon GloVe Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 BP
 Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon GloVe Vectors
 114/500 Documents Recovered Perfectly
@@ -99,15 +99,15 @@ Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon GloVe V
 Precision: 0.905395309818, Recall: 0.930219071151, F1-Score: 0.915946761857
 
 Rademacher_
-SSH
+SHP
 Testing Recovery of IMDB BoW from Compression by 200-Dimensional Rademacher Vectors
-3/500 Documents Satisfy SSH
+3/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 400-Dimensional Rademacher Vectors
-77/500 Documents Satisfy SSH
+77/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 800-Dimensional Rademacher Vectors
-402/500 Documents Satisfy SSH
+402/500 Documents Satisfy SHP
 Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Rademacher Vectors
-500/500 Documents Satisfy SSH
+500/500 Documents Satisfy SHP
 BP
 Testing Recovery of IMDB BoW from Compression by 200-Dimensional Rademacher Vectors
 3/500 Documents Recovered Perfectly

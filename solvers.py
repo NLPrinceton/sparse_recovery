@@ -266,13 +266,13 @@ def OrthogonalMP(A, b, tol=1E-4, nnz=None, positive=False):
       x_i = projections[index] / A_i.T.dot(A_i)
     else:
       A_i = np.vstack([A_i, A[:,index]])
-      x_i = inv(A_i.dot(A_i.T)).dot(A_i.dot(b))
+      x_i = solve(A_i.dot(A_i.T), A_i.dot(b), assume_a='sym')
       if positive:
         while min(x_i) < 0.0:
           argmin = np.argmin(x_i)
           indices = indices[:argmin] + indices[argmin+1:]
           A_i = np.vstack([A_i[:argmin], A_i[argmin+1:]])
-          x_i = solve(A_i.dot(A_i.T), A_i.dot(b), assume_a='pos')
+          x_i = solve(A_i.dot(A_i.T), A_i.dot(b), assume_a='sym')
     resid = b - A_i.T.dot(x_i)
 
   for i, index in enumerate(indices):
@@ -381,8 +381,8 @@ def binary_line_search(x, dx, f, nsplit=16):
 
 
 # NOTE: Hybrid (1st & 2nd Order) Method Based on Boyd & Vandenberghe, ``Chapter 10: Equality-Contrained Minimization," Convex Optimization, 2004.
-def SupportSupportingHyperplane(x, A, niter=None, eps=1.0, nsplit=16):
-  '''checks SSH property by solving min_h sum(max{Ch+eps,0}^2) s.t. Sh=0, where C=(A_{supp(x)^C}^T 1) and S=(A_supp(x)^T 1)
+def SupportingHyperplaneProperty(x, A, niter=None, eps=1.0, nsplit=16):
+  '''checks SHP property by solving min_h sum(max{Ch+eps,0}^2) s.t. Sh=0, where C=(A_{supp(x)^C}^T 1) and S=(A_supp(x)^T 1)
   Args:
     x: nonnegative vector of length n
     A: matrix of size (d, n)
@@ -452,7 +452,7 @@ def SupportSupportingHyperplane(x, A, niter=None, eps=1.0, nsplit=16):
 
   return False
 
-SSH = SupportSupportingHyperplane
+SHP = SupportingHyperplaneProperty
 
 
 if __name__ == '__main__':
@@ -468,16 +468,16 @@ if __name__ == '__main__':
   print('Signal Dimension:', n)
   print('Number of Measurements:', d)
   print('Tolerance:', tol)
-  print('Sparsity\tSSH\tMP\tMP+\tOMP\tOMP+\tBP\tBP+')
+  print('Sparsity\tSHP\tMP\tMP+\tOMP\tOMP+\tBP\tBP+')
   for s in range(10):
     x[s] = 1.0
     b = A.dot(x)
     normx = norm(x)
-    ssh = str(type(SSH(x, A)) == np.ndarray)
+    shp = str(type(SHP(x, A)) == np.ndarray)
     mp = str(norm(MP(A, b)-x)/normx < tol)
     mpp = str(norm(MP(A, b, positive=True)-x)/normx < tol)
     omp = str(norm(MP(A, b, orthogonal=True)-x)/normx < tol)
     ompp = str(norm(MP(A, b, positive=True, orthogonal=True)-x)/normx < tol)
     bp = str(norm(BP(A, b, ATinvAAT=ATinvAAT)-x)/normx < tol)
     bpp = str(norm(BP(A, b, positive=True)-x)/normx < tol)
-    print('\t'.join(['\t'+str(s+1), ssh, mp, mpp, omp, ompp, bp, bpp]))
+    print('\t'.join(['\t'+str(s+1), shp, mp, mpp, omp, ompp, bp, bpp]))
