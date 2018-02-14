@@ -1,0 +1,149 @@
+Amazon_SN_
+SSH
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon SN Vectors
+88/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon SN Vectors
+369/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon SN Vectors
+498/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon SN Vectors
+500/500 Documents Satisfy SSH
+BP
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon SN Vectors
+84/500 Documents Recovered Perfectly
+Precision: 0.46648132399, Recall: 0.366539148671, F1-Score: 0.403498768086
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon SN Vectors
+366/500 Documents Recovered Perfectly
+Precision: 0.925443500088, Recall: 0.861846576502, F1-Score: 0.886710332991
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon SN Vectors
+498/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 0.999633973711, F1-Score: 0.999805555556
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP+
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon SN Vectors
+9/500 Documents Recovered Perfectly
+Precision: 0.125630236097, Recall: 0.117026714498, F1-Score: 0.119777807813
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon SN Vectors
+135/500 Documents Recovered Perfectly
+Precision: 0.570851140859, Recall: 0.516047749799, F1-Score: 0.53821110913
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon SN Vectors
+474/500 Documents Recovered Perfectly
+Precision: 0.991603260059, Recall: 0.98165291033, F1-Score: 0.985835494905
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon SN Vectors
+5/500 Documents Recovered Perfectly
+Precision: 0.0635841433674, Recall: 0.0712958121211, F1-Score: 0.0669937355999
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon SN Vectors
+65/500 Documents Recovered Perfectly
+Precision: 0.280798532207, Recall: 0.311120029015, F1-Score: 0.29395807801
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon SN Vectors
+348/500 Documents Recovered Perfectly
+Precision: 0.820073185383, Recall: 0.839461867425, F1-Score: 0.828607102838
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+
+Amazon_GloVe_
+SSH
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon GloVe Vectors
+108/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon GloVe Vectors
+370/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+500/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+500/500 Documents Satisfy SSH
+BP
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon GloVe Vectors
+29/500 Documents Recovered Perfectly
+Precision: 0.372712111548, Recall: 0.272304476088, F1-Score: 0.308699868773
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon GloVe Vectors
+367/500 Documents Recovered Perfectly
+Precision: 0.923175692825, Recall: 0.860075605072, F1-Score: 0.884471803457
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP+
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon GloVe Vectors
+0/500 Documents Recovered Perfectly
+Precision: 0.0346082196596, Recall: 0.0400291142423, F1-Score: 0.0361860062204
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon GloVe Vectors
+11/500 Documents Recovered Perfectly
+Precision: 0.124762609611, Recall: 0.11831463334, F1-Score: 0.117101562465
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+127/500 Documents Recovered Perfectly
+Precision: 0.473118716828, Recall: 0.457691794555, F1-Score: 0.461448062832
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+469/500 Documents Recovered Perfectly
+Precision: 0.984744112111, Recall: 0.973911534964, F1-Score: 0.978490721003
+OMP
+Testing Recovery of SST BoW from Compression by 50-Dimensional Amazon GloVe Vectors
+0/500 Documents Recovered Perfectly
+Precision: 0.0292772665676, Recall: 0.03662911981, F1-Score: 0.0320486848824
+Testing Recovery of SST BoW from Compression by 100-Dimensional Amazon GloVe Vectors
+8/500 Documents Recovered Perfectly
+Precision: 0.0832963705078, Recall: 0.109916162319, F1-Score: 0.0926935681754
+Testing Recovery of SST BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+79/500 Documents Recovered Perfectly
+Precision: 0.313769990523, Recall: 0.364011686638, F1-Score: 0.331160005648
+Testing Recovery of SST BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+350/500 Documents Recovered Perfectly
+Precision: 0.818884027151, Recall: 0.842242112932, F1-Score: 0.827971642723
+
+Rademacher_
+SSH
+Testing Recovery of SST BoW from Compression by 50-Dimensional Rademacher Vectors
+33/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 100-Dimensional Rademacher Vectors
+144/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 200-Dimensional Rademacher Vectors
+438/500 Documents Satisfy SSH
+Testing Recovery of SST BoW from Compression by 400-Dimensional Rademacher Vectors
+500/500 Documents Satisfy SSH
+BP
+Testing Recovery of SST BoW from Compression by 50-Dimensional Rademacher Vectors
+26/500 Documents Recovered Perfectly
+Precision: 0.236865367965, Recall: 0.0860217825982, F1-Score: 0.107957275016
+Testing Recovery of SST BoW from Compression by 100-Dimensional Rademacher Vectors
+127/500 Documents Recovered Perfectly
+Precision: 0.721131679432, Recall: 0.342413019128, F1-Score: 0.398614106151
+Testing Recovery of SST BoW from Compression by 200-Dimensional Rademacher Vectors
+379/500 Documents Recovered Perfectly
+Precision: 0.981614230214, Recall: 0.819486829765, F1-Score: 0.85241173947
+Testing Recovery of SST BoW from Compression by 400-Dimensional Rademacher Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP+
+Testing Recovery of SST BoW from Compression by 50-Dimensional Rademacher Vectors
+35/500 Documents Recovered Perfectly
+Precision: 0.152510251893, Recall: 0.142145021654, F1-Score: 0.146107704257
+Testing Recovery of SST BoW from Compression by 100-Dimensional Rademacher Vectors
+142/500 Documents Recovered Perfectly
+Precision: 0.427806267895, Recall: 0.436899733818, F1-Score: 0.431500132066
+Testing Recovery of SST BoW from Compression by 200-Dimensional Rademacher Vectors
+422/500 Documents Recovered Perfectly
+Precision: 0.898766117997, Recall: 0.907891586096, F1-Score: 0.902894035574
+Testing Recovery of SST BoW from Compression by 400-Dimensional Rademacher Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP
+Testing Recovery of SST BoW from Compression by 50-Dimensional Rademacher Vectors
+24/500 Documents Recovered Perfectly
+Precision: 0.160312266363, Recall: 0.108981757095, F1-Score: 0.124672816944
+Testing Recovery of SST BoW from Compression by 100-Dimensional Rademacher Vectors
+107/500 Documents Recovered Perfectly
+Precision: 0.423099419109, Recall: 0.347166469382, F1-Score: 0.374098296413
+Testing Recovery of SST BoW from Compression by 200-Dimensional Rademacher Vectors
+383/500 Documents Recovered Perfectly
+Precision: 0.873065362824, Recall: 0.850649107118, F1-Score: 0.860053212509
+Testing Recovery of SST BoW from Compression by 400-Dimensional Rademacher Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0

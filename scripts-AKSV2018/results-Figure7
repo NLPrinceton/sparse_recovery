@@ -1,0 +1,149 @@
+Amazon_SN_
+SSH
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon SN Vectors
+110/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon SN Vectors
+423/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon SN Vectors
+500/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon SN Vectors
+500/500 Documents Satisfy SSH
+BP
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon SN Vectors
+106/500 Documents Recovered Perfectly
+Precision: 0.772566241965, Recall: 0.696975766507, F1-Score: 0.731675512487
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon SN Vectors
+412/500 Documents Recovered Perfectly
+Precision: 0.985167551545, Recall: 0.966223386777, F1-Score: 0.974972442948
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP+
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon SN Vectors
+10/500 Documents Recovered Perfectly
+Precision: 0.41807993287, Recall: 0.434146057011, F1-Score: 0.425106886652
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon SN Vectors
+267/500 Documents Recovered Perfectly
+Precision: 0.91291355227, Recall: 0.883336616374, F1-Score: 0.897295770284
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon SN Vectors
+499/500 Documents Recovered Perfectly
+Precision: 0.9999543379, Recall: 0.999848812095, F1-Score: 0.999900110988
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon SN Vectors
+1/500 Documents Recovered Perfectly
+Precision: 0.176387124227, Recall: 0.227912068475, F1-Score: 0.198652133583
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon SN Vectors
+93/500 Documents Recovered Perfectly
+Precision: 0.497455908037, Recall: 0.566455687881, F1-Score: 0.528224750344
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon SN Vectors
+442/500 Documents Recovered Perfectly
+Precision: 0.955202688576, Recall: 0.964872093457, F1-Score: 0.959703870838
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon SN Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+
+Amazon_GloVe_
+SSH
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+119/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+440/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon GloVe Vectors
+500/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon GloVe Vectors
+500/500 Documents Satisfy SSH
+BP
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+114/500 Documents Recovered Perfectly
+Precision: 0.760571444444, Recall: 0.689977684035, F1-Score: 0.722457837686
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+437/500 Documents Recovered Perfectly
+Precision: 0.984352388407, Recall: 0.969919087417, F1-Score: 0.976593233925
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon GloVe Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon GloVe Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP+
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+0/500 Documents Recovered Perfectly
+Precision: 0.0329636728708, Recall: 0.069155402936, F1-Score: 0.044292641941
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+1/500 Documents Recovered Perfectly
+Precision: 0.116062801591, Recall: 0.219537753885, F1-Score: 0.150474649917
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon GloVe Vectors
+114/500 Documents Recovered Perfectly
+Precision: 0.499272468162, Recall: 0.606239489727, F1-Score: 0.541760040765
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon GloVe Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Amazon GloVe Vectors
+0/500 Documents Recovered Perfectly
+Precision: 0.0195803021124, Recall: 0.0405402005806, F1-Score: 0.0260934198208
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Amazon GloVe Vectors
+1/500 Documents Recovered Perfectly
+Precision: 0.0649621917108, Recall: 0.138731889181, F1-Score: 0.0879278859543
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Amazon GloVe Vectors
+47/500 Documents Recovered Perfectly
+Precision: 0.28199689686, Recall: 0.41153561482, F1-Score: 0.32782697843
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Amazon GloVe Vectors
+389/500 Documents Recovered Perfectly
+Precision: 0.905395309818, Recall: 0.930219071151, F1-Score: 0.915946761857
+
+Rademacher_
+SSH
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Rademacher Vectors
+3/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Rademacher Vectors
+77/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Rademacher Vectors
+402/500 Documents Satisfy SSH
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Rademacher Vectors
+500/500 Documents Satisfy SSH
+BP
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Rademacher Vectors
+3/500 Documents Recovered Perfectly
+Precision: 0.539478287809, Recall: 0.155565952724, F1-Score: 0.237991421837
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Rademacher Vectors
+42/500 Documents Recovered Perfectly
+Precision: 0.788414566688, Recall: 0.341427677796, F1-Score: 0.459031902869
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Rademacher Vectors
+309/500 Documents Recovered Perfectly
+Precision: 0.984610673182, Recall: 0.808112588224, F1-Score: 0.867769070732
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Rademacher Vectors
+499/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 0.999707746479, F1-Score: 0.999842355176
+OMP+
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Rademacher Vectors
+5/500 Documents Recovered Perfectly
+Precision: 0.320325417978, Recall: 0.289978907226, F1-Score: 0.303417415592
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Rademacher Vectors
+110/500 Documents Recovered Perfectly
+Precision: 0.574417920908, Recall: 0.594067838418, F1-Score: 0.583665617641
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Rademacher Vectors
+451/500 Documents Recovered Perfectly
+Precision: 0.962625358204, Recall: 0.968241283804, F1-Score: 0.965290575329
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Rademacher Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
+OMP
+Testing Recovery of IMDB BoW from Compression by 200-Dimensional Rademacher Vectors
+2/500 Documents Recovered Perfectly
+Precision: 0.416420253718, Recall: 0.243861872732, F1-Score: 0.305322090909
+Testing Recovery of IMDB BoW from Compression by 400-Dimensional Rademacher Vectors
+86/500 Documents Recovered Perfectly
+Precision: 0.656429305663, Recall: 0.544523691028, F1-Score: 0.591910270829
+Testing Recovery of IMDB BoW from Compression by 800-Dimensional Rademacher Vectors
+408/500 Documents Recovered Perfectly
+Precision: 0.948463062628, Recall: 0.935055240614, F1-Score: 0.941319012815
+Testing Recovery of IMDB BoW from Compression by 1600-Dimensional Rademacher Vectors
+500/500 Documents Recovered Perfectly
+Precision: 1.0, Recall: 1.0, F1-Score: 1.0
