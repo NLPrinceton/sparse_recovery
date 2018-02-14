@@ -6,6 +6,7 @@ from text_embedding.vectors import *
 
 
 TASKMAP.update({'imdb': imdb, 'sst': sst})
+# NOTE: Set necessary embedding path here
 VECTORFILES.update(dict((('Amazon', 'GloVe', dim), '/n/fs/nlpdatasets/AmazonProductData/amazon_glove'+str(dim)+'.txt') for dim in [50, 100, 200, 400, 800, 1600]))
 VECTORFILES.update(dict((('Amazon', 'SN', dim), '/n/fs/nlpdatasets/AmazonProductData/amazon_randwalk'+str(dim)+'.txt') for dim in [50, 100, 200, 400, 800, 1600]))
 
